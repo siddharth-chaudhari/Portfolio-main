@@ -2,8 +2,7 @@ import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
-import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from "react-icons/ri";
@@ -235,152 +234,164 @@ export type Project = {
   live: string;
 };
 const projects: Project[] = [
+    // The Auction Arena
   {
-    id: "ai-codegen",
-    category: "AI & ML",
-    title: "CodeGen AI",
-    src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
-    screenshots: ["1.png"],
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.shadcn,
-      ],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.python,
-        PROJECT_SKILLS.postgres,
-        PROJECT_SKILLS.express,
-      ],
-    },
-    live: "https://codegen-ai-demo.vercel.app",
-    github: "https://github.com/dummy/codegen-ai",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            CodeGen AI is an intelligent code generation platform that uses
-            advanced AI models to transform natural language into production-ready
-            code. Describe what you want to build, and watch as the AI crafts
-            elegant solutions across multiple programming languages and frameworks.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
-              "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">AI-Powered Generation</TypographyH3>
-          <p className="font-mono mb-2">
-            Leverage cutting-edge language models to generate code snippets,
-            complete functions, and even entire applications from simple descriptions.
-            Support for 20+ programming languages and all major frameworks.
-          </p>
-        </div>
-      );
-    },
+  id: "auction-arena",
+  category: "Real-Time Apps",
+  title: "The Auction Arena",
+  src: "/assets/Project-banners/Auction-banner.png",
+  screenshots: ["auction-1.png", "auction-2.png"],
+  live: "https://your-live-link.com",   // replace
+  github: "https://github.com/your-repo", // replace
+  // description: "A real-time fantasy sports bidding system using WebSocket and Redux Toolkit.",
+  skills: {
+    frontend: [
+      PROJECT_SKILLS.react,
+      // PROJECT_SKILLS.reduxToolkit,
+      PROJECT_SKILLS.tailwind,
+      PROJECT_SKILLS.js
+      
+    ],
+    backend: [
+      PROJECT_SKILLS.node,
+      PROJECT_SKILLS.postgres,
+    ],
   },
+  get content() {
+    return (
+      <div>
+        <TypographyP className="font-mono">
+          A real-time bidding platform built for fantasy sports. It supports
+          1000+ concurrent users with live WebSocket updates, animated UI, and
+          a fully optimized Redux Toolkit architecture.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} repo={this.github} />
+
+        <SlideShow
+          images={[
+            this.src,
+            "https://images.unsplash.com/photo-1551934267-31ca0a993013?w=800&h=600&fit=crop",
+          ]}
+        />
+
+        <TypographyH3 className="my-4 mt-8">Real-Time Engine</TypographyH3>
+        <p className="font-mono mb-2">
+          WebSocket-powered live auctions, animated transitions, and instant
+          updates for bids, player lists, and budgets.
+        </p>
+      </div>
+    );
+  },
+  },
+
+  // Nft MarketPlace
   {
-    id: "blockchain-nft",
-    category: "Web3 & Blockchain",
-    title: "NeuralNFT Marketplace",
-    src: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
-    screenshots: ["1.png", "2.png"],
-    live: "https://neural-nft-demo.vercel.app",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.aceternity,
-      ],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.postgres,
-      ],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            NeuralNFT Marketplace is a next-generation NFT platform where digital
-            art meets blockchain technology. Mint, trade, and discover unique
-            generative art pieces powered by AI algorithms. Each NFT is a one-of-a-kind
-            creation with verifiable ownership on the blockchain.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
-              "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&h=600&fit=crop",
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Blockchain Integration</TypographyH3>
-          <p className="font-mono mb-2">
-            Seamless wallet connections, gas-optimized transactions, and real-time
-            trading. Built with Web3 standards to ensure security and interoperability
-            across the blockchain ecosystem.
-          </p>
-        </div>
-      );
-    },
+  id: "nft-marketplace",
+  category: "Web3 & Blockchain",
+  title: "NeuralNFT Marketplace",
+  src: "/assets/project-banners/Nft-banner.png",
+  screenshots: ["1.png", "2.png"],
+  live: "https://neural-nft-demo.vercel.app", // change or remove if not available
+  github: "https://github.com/yourusername/neural-nft-marketplace", // change
+  skills: {
+    frontend: [
+      PROJECT_SKILLS.ts,
+      PROJECT_SKILLS.next,
+      PROJECT_SKILLS.react,
+      PROJECT_SKILLS.tailwind,
+      PROJECT_SKILLS.aceternity
+    ],
+    backend: [
+      PROJECT_SKILLS.node,
+      PROJECT_SKILLS.express,
+      PROJECT_SKILLS.postgres
+    ],
   },
+  get content() {
+    return (
+      <div>
+        <TypographyP className="font-mono ">
+          NeuralNFT Marketplace is a modern NFT marketplace combining generative art
+          with secure on-chain ownership. Browse collections, mint unique pieces,
+          and trade with an integrated wallet flow and gas-optimised transactions.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} repo={this.github} />
+
+        <SlideShow
+          images={[
+            "/assets/projects-screenshots/nft-marketplace/1.png",
+            "/assets/projects-screenshots/nft-marketplace/2.png",
+          ]}
+        />
+
+        <TypographyH3 className="my-4 mt-8">Key features</TypographyH3>
+        <p className="font-mono mb-2">
+          Wallet connect (MetaMask), minting flow, collection galleries, lazy-minting,
+          and secure smart contracts. Frontend built with Next.js and Tailwind.
+        </p>
+      </div>
+    );
+  },
+  },
+
+  // Harry-potter
   {
-    id: "collab-whiteboard",
-    category: "Collaboration",
-    title: "SyncBoard",
-    src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-    screenshots: ["1.png", "2.png", "3.png"],
-    live: "https://syncboard-demo.vercel.app",
-    github: "https://github.com/dummy/syncboard",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.framerMotion,
-      ],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.sockerio,
-        PROJECT_SKILLS.mongo,
-        PROJECT_SKILLS.express,
-      ],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            SyncBoard is a real-time collaborative whiteboard that brings teams
-            together across infinite canvas space. Draw, sketch, add sticky notes,
-            and collaborate seamlessly with cursor tracking, live cursors, and
-            conflict-free synchronized editing. Perfect for brainstorming, design
-            sessions, and remote collaboration.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-              "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&h=600&fit=crop",
-            ]}
-          />
-          <TypographyH3 className="my-4 mt-8">Real-Time Collaboration</TypographyH3>
-          <p className="font-mono mb-2">
-            See what others are drawing in real-time with sub-100ms latency.
-            Built on operational transformation algorithms for smooth multi-user
-            editing. Zoom infinitely, pan seamlessly, and never lose your work.
-          </p>
-        </div>
-      );
-    },
+  id: "harry-potter-portfolio",
+  category: "Frontend UI/UX",
+  title: "Harry Potter Themed Portfolio",
+  src: "/assets/project-banners/Harry-banner.png",
+  screenshots: ["1.png", "2.png", "3.png"],
+  live: "https://your-hp-portfolio-url.com",  // change if needed
+  github: "https://github.com/yourusername/harry-potter-portfolio", // change
+  skills: {
+    frontend: [
+      PROJECT_SKILLS.ts,
+      PROJECT_SKILLS.react,
+      PROJECT_SKILLS.next,
+      PROJECT_SKILLS.tailwind,
+      PROJECT_SKILLS.framerMotion,
+      PROJECT_SKILLS.aceternity
+    ],
+    backend: [],
   },
+  get content() {
+    return (
+      <div>
+        <TypographyP className="font-mono ">
+          A fully animated Harry Potter–themed portfolio featuring wizard-style UI,
+          spells-inspired animations, magical transitions, and custom 3D effects.
+          Built with Next.js, Tailwind CSS, and Framer Motion for smooth cinematic visuals.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} repo={this.github} />
+
+        <SlideShow
+          images={[
+            "/assets/projects-screenshots/harry-portfolio/1.png",
+            "/assets/projects-screenshots/harry-portfolio/2.png",
+            "/assets/projects-screenshots/harry-portfolio/3.png",
+          ]}
+        />
+
+        <TypographyH3 className="my-4 mt-8">Magical UI Features</TypographyH3>
+        <p className="font-mono mb-2">
+          Floating typography, spell-casting hover effects, Hogwarts-inspired color 
+          palette, Parallax animations, custom magic cursor, and smooth enchanted transitions.
+        </p>
+
+        <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
+        <p className="font-mono mb-2">
+          Next.js, Tailwind CSS, Framer Motion for animations, custom assets,
+          and optimized responsive design to deliver a magical experience across all devices.
+        </p>
+      </div>
+    );
+  },
+  },
+
+
   {
     id: "vr-visualizer",
     category: "XR & Visualization",

@@ -4,7 +4,7 @@ const links: Link[] = [
   {
     title: 'Home',
     href: '/',
-    thumbnail: '/assets/nav-link-previews/landing.png'
+    thumbnail: '/assets/nav-link-previews/landing-new.png'
   },
   {
     title: 'About',
