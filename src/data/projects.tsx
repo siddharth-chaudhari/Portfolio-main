@@ -234,211 +234,214 @@ export type Project = {
   live: string;
 };
 const projects: Project[] = [
-    // The Auction Arena
+  // The Auction Arena
   {
-  id: "auction-arena",
-  category: "Real-Time Apps",
-  title: "The Auction Arena",
-  src: "/assets/Project-banners/Auction-banner.png",
-  screenshots: ["auction-1.png", "auction-2.png"],
-  live: "https://your-live-link.com",   // replace
-  github: "https://github.com/your-repo", // replace
-  // description: "A real-time fantasy sports bidding system using WebSocket and Redux Toolkit.",
-  skills: {
-    frontend: [
-      PROJECT_SKILLS.react,
-      // PROJECT_SKILLS.reduxToolkit,
-      PROJECT_SKILLS.tailwind,
-      PROJECT_SKILLS.js
-      
-    ],
-    backend: [
-      PROJECT_SKILLS.node,
-      PROJECT_SKILLS.postgres,
-    ],
-  },
-  get content() {
-    return (
-      <div>
-        <TypographyP className="font-mono">
-          A real-time bidding platform built for fantasy sports. It supports
-          1000+ concurrent users with live WebSocket updates, animated UI, and
-          a fully optimized Redux Toolkit architecture.
-        </TypographyP>
+    id: "auction-arena",
+    category: "Real-Time Apps",
+    title: "The Auction Arena",
+    src: "/assets/Project-banners/Auction-banner.png",
+    screenshots: ["auction-1.png", "auction-2.png"],
+    live: "https://your-live-link.com",   // replace
+    github: "https://github.com/your-repo", // replace
+    // description: "A real-time fantasy sports bidding system using WebSocket and Redux Toolkit.",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        // PROJECT_SKILLS.reduxToolkit,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.js
 
-        <ProjectsLinks live={this.live} repo={this.github} />
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.postgres,
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            A real-time bidding platform built for fantasy sports. It supports
+            1000+ concurrent users with live WebSocket updates, animated UI, and
+            a fully optimized Redux Toolkit architecture.
+          </TypographyP>
 
-        <SlideShow
-          images={[
-            this.src,
-            "https://images.unsplash.com/photo-1551934267-31ca0a993013?w=800&h=600&fit=crop",
-          ]}
-        />
+          <ProjectsLinks live={this.live} repo={this.github} />
 
-        <TypographyH3 className="my-4 mt-8">Real-Time Engine</TypographyH3>
-        <p className="font-mono mb-2">
-          WebSocket-powered live auctions, animated transitions, and instant
-          updates for bids, player lists, and budgets.
-        </p>
-      </div>
-    );
-  },
+          <SlideShow
+            images={[
+              this.src,
+              "https://images.unsplash.com/photo-1551934267-31ca0a993013?w=800&h=600&fit=crop",
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Real-Time Engine</TypographyH3>
+          <p className="font-mono mb-2">
+            WebSocket-powered live auctions, animated transitions, and instant
+            updates for bids, player lists, and budgets.
+          </p>
+        </div>
+      );
+    },
   },
 
   // Nft MarketPlace
   {
-  id: "nft-marketplace",
-  category: "Web3 & Blockchain",
-  title: "NeuralNFT Marketplace",
-  src: "/assets/project-banners/Nft-banner.png",
-  screenshots: ["1.png", "2.png"],
-  live: "https://neural-nft-demo.vercel.app", // change or remove if not available
-  github: "https://github.com/yourusername/neural-nft-marketplace", // change
-  skills: {
-    frontend: [
-      PROJECT_SKILLS.ts,
-      PROJECT_SKILLS.next,
-      PROJECT_SKILLS.react,
-      PROJECT_SKILLS.tailwind,
-      PROJECT_SKILLS.aceternity
-    ],
-    backend: [
-      PROJECT_SKILLS.node,
-      PROJECT_SKILLS.express,
-      PROJECT_SKILLS.postgres
-    ],
-  },
-  get content() {
-    return (
-      <div>
-        <TypographyP className="font-mono ">
-          NeuralNFT Marketplace is a modern NFT marketplace combining generative art
-          with secure on-chain ownership. Browse collections, mint unique pieces,
-          and trade with an integrated wallet flow and gas-optimised transactions.
-        </TypographyP>
-
-        <ProjectsLinks live={this.live} repo={this.github} />
-
-        <SlideShow
-          images={[
-            "/assets/projects-screenshots/nft-marketplace/1.png",
-            "/assets/projects-screenshots/nft-marketplace/2.png",
-          ]}
-        />
-
-        <TypographyH3 className="my-4 mt-8">Key features</TypographyH3>
-        <p className="font-mono mb-2">
-          Wallet connect (MetaMask), minting flow, collection galleries, lazy-minting,
-          and secure smart contracts. Frontend built with Next.js and Tailwind.
-        </p>
-      </div>
-    );
-  },
-  },
-
-  // Harry-potter
-  {
-  id: "harry-potter-portfolio",
-  category: "Frontend UI/UX",
-  title: "Harry Potter Themed Portfolio",
-  src: "/assets/project-banners/Harry-banner.png",
-  screenshots: ["1.png", "2.png", "3.png"],
-  live: "https://your-hp-portfolio-url.com",  // change if needed
-  github: "https://github.com/yourusername/harry-potter-portfolio", // change
-  skills: {
-    frontend: [
-      PROJECT_SKILLS.ts,
-      PROJECT_SKILLS.react,
-      PROJECT_SKILLS.next,
-      PROJECT_SKILLS.tailwind,
-      PROJECT_SKILLS.framerMotion,
-      PROJECT_SKILLS.aceternity
-    ],
-    backend: [],
-  },
-  get content() {
-    return (
-      <div>
-        <TypographyP className="font-mono ">
-          A fully animated Harry Potter–themed portfolio featuring wizard-style UI,
-          spells-inspired animations, magical transitions, and custom 3D effects.
-          Built with Next.js, Tailwind CSS, and Framer Motion for smooth cinematic visuals.
-        </TypographyP>
-
-        <ProjectsLinks live={this.live} repo={this.github} />
-
-        <SlideShow
-          images={[
-            "/assets/projects-screenshots/harry-portfolio/1.png",
-            "/assets/projects-screenshots/harry-portfolio/2.png",
-            "/assets/projects-screenshots/harry-portfolio/3.png",
-          ]}
-        />
-
-        <TypographyH3 className="my-4 mt-8">Magical UI Features</TypographyH3>
-        <p className="font-mono mb-2">
-          Floating typography, spell-casting hover effects, Hogwarts-inspired color 
-          palette, Parallax animations, custom magic cursor, and smooth enchanted transitions.
-        </p>
-
-        <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
-        <p className="font-mono mb-2">
-          Next.js, Tailwind CSS, Framer Motion for animations, custom assets,
-          and optimized responsive design to deliver a magical experience across all devices.
-        </p>
-      </div>
-    );
-  },
-  },
-
-
-  {
-    id: "vr-visualizer",
-    category: "XR & Visualization",
-    title: "DimensionVR",
-    src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
-    screenshots: ["1.png"],
-    live: "https://dimension-vr-demo.vercel.app",
+    id: "nft-marketplace",
+    category: "Web3 & Blockchain",
+    title: "NeuralNFT Marketplace",
+    src: "/assets/project-banners/Nft-banner.png",
+    screenshots: ["1.png", "2.png"],
+    live: "https://neural-nft-demo.vercel.app", // change or remove if not available
+    github: "https://github.com/yourusername/neural-nft-marketplace", // change
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
         PROJECT_SKILLS.next,
         PROJECT_SKILLS.react,
-        PROJECT_SKILLS.spline,
         PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.aceternity
       ],
       backend: [
         PROJECT_SKILLS.node,
-        PROJECT_SKILLS.postgres,
-        PROJECT_SKILLS.prisma,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.postgres
       ],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            DimensionVR is a browser-based 3D visualization platform that transforms
-            data into immersive virtual experiences. Explore datasets in 3D space,
-            manipulate models with hand tracking, and share VR sessions with teammates.
-            No headset required—works in WebXR for desktop, mobile, and VR headsets.
+            NeuralNFT Marketplace is a modern NFT marketplace combining generative art
+            with secure on-chain ownership. Browse collections, mint unique pieces,
+            and trade with an integrated wallet flow and gas-optimised transactions.
           </TypographyP>
+
           <ProjectsLinks live={this.live} repo={this.github} />
+
           <SlideShow
             images={[
-              "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
-              "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
+              "/assets/projects-screenshots/nft-marketplace/1.png",
+              "/assets/projects-screenshots/nft-marketplace/2.png",
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">WebXR Integration</TypographyH3>
+
+          <TypographyH3 className="my-4 mt-8">Key features</TypographyH3>
           <p className="font-mono mb-2">
-            Experience your data in true 3D. Import 3D models, visualize point clouds,
-            and interact with spatial data using WebXR APIs. Works seamlessly across
-            all devices with graceful fallbacks for non-VR environments.
+            Wallet connect (MetaMask), minting flow, collection galleries, lazy-minting,
+            and secure smart contracts. Frontend built with Next.js and Tailwind.
           </p>
         </div>
       );
     },
   },
+
+  // Harry-potter
+  {
+    id: "harry-potter-portfolio",
+    category: "Frontend UI/UX",
+    title: "Harry Potter Themed Portfolio",
+    src: "/assets/project-banners/Harry-banner.png",
+    screenshots: ["1.png", "2.png", "3.png"],
+    live: "https://your-hp-portfolio-url.com",  // change if needed
+    github: "https://github.com/yourusername/harry-potter-portfolio", // change
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.framerMotion,
+        PROJECT_SKILLS.aceternity
+      ],
+      backend: [],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A fully animated Harry Potter–themed portfolio featuring wizard-style UI,
+            spells-inspired animations, magical transitions, and custom 3D effects.
+            Built with Next.js, Tailwind CSS, and Framer Motion for smooth cinematic visuals.
+          </TypographyP>
+
+          <ProjectsLinks live={this.live} repo={this.github} />
+
+          <SlideShow
+            images={[
+              "/assets/projects-screenshots/harry-portfolio/1.png",
+              "/assets/projects-screenshots/harry-portfolio/2.png",
+              "/assets/projects-screenshots/harry-portfolio/3.png",
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Magical UI Features</TypographyH3>
+          <p className="font-mono mb-2">
+            Floating typography, spell-casting hover effects, Hogwarts-inspired color
+            palette, Parallax animations, custom magic cursor, and smooth enchanted transitions.
+          </p>
+
+          <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
+          <p className="font-mono mb-2">
+            Next.js, Tailwind CSS, Framer Motion for animations, custom assets,
+            and optimized responsive design to deliver a magical experience across all devices.
+          </p>
+        </div>
+      );
+    },
+  },
+
+  //travelon
+  {
+    id: "travelon",
+    category: "Client Project",
+    title: "Travelon — Intercity Travel Booking",
+    // local file you uploaded (provided path)
+    src: "/assets/project-banners/Travelon-banner.png",
+    screenshots: ["/mnt/data/Portfolio-typescript-keyboard.zip"],
+    live: "https://your-travelon-client-site.example", // update if available
+    github: "https://github.com/yourusername/travelon", // update if available
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.postgres
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Travelon is a client project for intercity travel bookings. Users can search routes,
+            select seats, and book trips between cities. The platform supports car listings,
+            driver profiles, booking management, and a dashboard for admins to manage trips.
+          </TypographyP>
+
+          <ProjectsLinks live={this.live} repo={this.github} />
+
+          <SlideShow
+            images={[
+              "/mnt/data/Portfolio-typescript-keyboard.zip",
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Highlights</TypographyH3>
+          <p className="font-mono mb-2">
+            Passenger booking flow, search by city-to-city, booking status dashboard,
+            admin panel for managing vehicles and schedules, and responsive UI optimized for mobile.
+          </p>
+        </div>
+      );
+    },
+  },
+
+
   {
     id: "neural-playground",
     category: "AI & ML",
